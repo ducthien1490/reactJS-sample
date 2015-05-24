@@ -56,43 +56,43 @@ var SearchBar = React.createClass({
                     this.refs.inStockOnlyInput.getDOMNode().checked
                     );
                 },
-    render: function() {
-              return (
-                <form>
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    value={this.props.filterText}
-                    ref="filterTextInput"
-                    onChange={this.handleChange}
-                  />
-                <p>
-                  <input
-                    type="checkbox"
-                    checked={this.props.inStockOnly}
-                    ref="inStockOnlyInput"
-                    onChange={this.handleChange}
-                  />
-                  {' '}
-                  Only show products in stock
-                </p>
-                </form>
-                );
-            }
+  render: function() {
+            return (
+              <form>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={this.props.filterText}
+                  ref="filterTextInput"
+                  onChange={this.handleChange}
+                />
+              <p>
+                <input
+                  type="checkbox"
+                  checked={this.props.inStockOnly}
+                  ref="inStockOnlyInput"
+                  onChange={this.handleChange}
+                />
+                {' '}
+                Only show products in stock
+              </p>
+              </form>
+              );
+          }
 });
 
 var FilterableProductTable = React.createClass({
     getInitialState: function() {
                      return {
                        filterText: '',
-    inStockOnly: false
+                       inStockOnly: false
                      };
                    },
 
     handleUserInput: function(filterText, inStockOnly) {
                        this.setState({
                          filterText: filterText,
-                       inStockOnly: inStockOnly
+                         inStockOnly: inStockOnly
                        });
                      },
 
