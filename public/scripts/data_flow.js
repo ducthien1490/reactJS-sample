@@ -83,11 +83,11 @@ var SearchBar = React.createClass({
 
 var FilterableProductTable = React.createClass({
     getInitialState: function() {
-                     return {
-                       filterText: '',
-                       inStockOnly: false
-                     };
-                   },
+                       return {
+                         filterText: '',
+                         inStockOnly: false
+                       };
+                     },
 
     handleUserInput: function(filterText, inStockOnly) {
                        this.setState({
